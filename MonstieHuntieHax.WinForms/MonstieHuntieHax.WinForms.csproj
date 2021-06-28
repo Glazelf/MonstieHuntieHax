@@ -29,12 +29,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="SysBot\**" />
-    <EmbeddedResource Remove="SysBot\**" />
-    <None Remove="SysBot\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

@@ -332,7 +332,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotPlaytimeCount.Name = "SysBotPlaytimeCount";
             this.SysBotPlaytimeCount.Size = new System.Drawing.Size(75, 23);
             this.SysBotPlaytimeCount.TabIndex = 17;
-            this.SysBotPlaytimeCount.ValueChanged += new System.EventHandler(this.SysBotPlaytimeCount_ValueChanged);
             // 
             // LabelSysBotPlaytime
             // 
@@ -359,7 +358,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotCapturedTotalCount.Name = "SysBotCapturedTotalCount";
             this.SysBotCapturedTotalCount.Size = new System.Drawing.Size(75, 23);
             this.SysBotCapturedTotalCount.TabIndex = 15;
-            this.SysBotCapturedTotalCount.ValueChanged += new System.EventHandler(this.SysBotCapturedTotalCount_ValueChanged);
             // 
             // SysBotSlainTotalCount
             // 
@@ -375,7 +373,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotSlainTotalCount.Name = "SysBotSlainTotalCount";
             this.SysBotSlainTotalCount.Size = new System.Drawing.Size(75, 23);
             this.SysBotSlainTotalCount.TabIndex = 14;
-            this.SysBotSlainTotalCount.ValueChanged += new System.EventHandler(this.SysBotSlainTotalCount_ValueChanged);
             // 
             // SysBotArenaQuestCount
             // 
@@ -391,7 +388,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotArenaQuestCount.Name = "SysBotArenaQuestCount";
             this.SysBotArenaQuestCount.Size = new System.Drawing.Size(75, 23);
             this.SysBotArenaQuestCount.TabIndex = 13;
-            this.SysBotArenaQuestCount.ValueChanged += new System.EventHandler(this.SysBotArenaQuestCount_ValueChanged);
             // 
             // SysBotRampageQuestCount
             // 
@@ -407,7 +403,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotRampageQuestCount.Name = "SysBotRampageQuestCount";
             this.SysBotRampageQuestCount.Size = new System.Drawing.Size(75, 23);
             this.SysBotRampageQuestCount.TabIndex = 12;
-            this.SysBotRampageQuestCount.ValueChanged += new System.EventHandler(this.SysBotRampageQuestCount_ValueChanged);
             // 
             // SysBotHighRankQuestCount
             // 
@@ -423,7 +418,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotHighRankQuestCount.Name = "SysBotHighRankQuestCount";
             this.SysBotHighRankQuestCount.Size = new System.Drawing.Size(75, 23);
             this.SysBotHighRankQuestCount.TabIndex = 5;
-            this.SysBotHighRankQuestCount.ValueChanged += new System.EventHandler(this.SysBotHighRankQuestCount_ValueChanged);
             // 
             // SysBotLowRankQuestCount
             // 
@@ -439,7 +433,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotLowRankQuestCount.Name = "SysBotLowRankQuestCount";
             this.SysBotLowRankQuestCount.Size = new System.Drawing.Size(75, 23);
             this.SysBotLowRankQuestCount.TabIndex = 11;
-            this.SysBotLowRankQuestCount.ValueChanged += new System.EventHandler(this.SysBotLowRankQuestCount_ValueChanged);
             // 
             // SysBotVillageQuestCount
             // 
@@ -455,7 +448,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotVillageQuestCount.Name = "SysBotVillageQuestCount";
             this.SysBotVillageQuestCount.Size = new System.Drawing.Size(75, 23);
             this.SysBotVillageQuestCount.TabIndex = 5;
-            this.SysBotVillageQuestCount.ValueChanged += new System.EventHandler(this.SysBotVillageQuestCount_ValueChanged);
             // 
             // LabelSysBotCapturedTotal
             // 
@@ -564,7 +556,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotPointsCount.Name = "SysBotPointsCount";
             this.SysBotPointsCount.Size = new System.Drawing.Size(97, 23);
             this.SysBotPointsCount.TabIndex = 3;
-            this.SysBotPointsCount.ValueChanged += new System.EventHandler(this.SysBotPointsCount_ValueChanged);
             // 
             // LabelSysBotPoints
             // 
@@ -650,7 +641,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotPouchItem5Count.Name = "SysBotPouchItem5Count";
             this.SysBotPouchItem5Count.Size = new System.Drawing.Size(71, 23);
             this.SysBotPouchItem5Count.TabIndex = 9;
-            this.SysBotPouchItem5Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem5Count_ValueChanged);
             // 
             // LabelSysBotPouchItem1
             // 
@@ -688,7 +678,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotPouchItem1Count.Name = "SysBotPouchItem1Count";
             this.SysBotPouchItem1Count.Size = new System.Drawing.Size(71, 23);
             this.SysBotPouchItem1Count.TabIndex = 0;
-            this.SysBotPouchItem1Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem1Count_ValueChanged);
             // 
             // SysBotPouchItem4Count
             // 
@@ -704,7 +693,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotPouchItem4Count.Name = "SysBotPouchItem4Count";
             this.SysBotPouchItem4Count.Size = new System.Drawing.Size(71, 23);
             this.SysBotPouchItem4Count.TabIndex = 7;
-            this.SysBotPouchItem4Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem4Count_ValueChanged);
             // 
             // LabelSysBotPouchItem2
             // 
@@ -742,7 +730,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotPouchItem2Count.Name = "SysBotPouchItem2Count";
             this.SysBotPouchItem2Count.Size = new System.Drawing.Size(71, 23);
             this.SysBotPouchItem2Count.TabIndex = 3;
-            this.SysBotPouchItem2Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem2Count_ValueChanged);
             // 
             // SysBotPouchItem3Count
             // 
@@ -758,7 +745,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotPouchItem3Count.Name = "SysBotPouchItem3Count";
             this.SysBotPouchItem3Count.Size = new System.Drawing.Size(71, 23);
             this.SysBotPouchItem3Count.TabIndex = 5;
-            this.SysBotPouchItem3Count.ValueChanged += new System.EventHandler(this.SysBotPouchItem3Count_ValueChanged);
             // 
             // LabelSysBotPouchItem3
             // 
@@ -808,7 +794,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotHunterCoordZCount.Name = "SysBotHunterCoordZCount";
             this.SysBotHunterCoordZCount.Size = new System.Drawing.Size(86, 23);
             this.SysBotHunterCoordZCount.TabIndex = 10;
-            this.SysBotHunterCoordZCount.ValueChanged += new System.EventHandler(this.SysBotHunterCoordZCount_ValueChanged);
             // 
             // SysBotHunterCoordZLabel
             // 
@@ -840,7 +825,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotHunterCoordYCount.Name = "SysBotHunterCoordYCount";
             this.SysBotHunterCoordYCount.Size = new System.Drawing.Size(79, 23);
             this.SysBotHunterCoordYCount.TabIndex = 8;
-            this.SysBotHunterCoordYCount.ValueChanged += new System.EventHandler(this.SysBotHunterCoordYCount_ValueChanged);
             // 
             // SysBotHunterCoordYLabel
             // 
@@ -872,7 +856,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotHunterCoordXCount.Name = "SysBotHunterCoordXCount";
             this.SysBotHunterCoordXCount.Size = new System.Drawing.Size(75, 23);
             this.SysBotHunterCoordXCount.TabIndex = 6;
-            this.SysBotHunterCoordXCount.ValueChanged += new System.EventHandler(this.SysBotHunterCoordXCount_ValueChanged);
             // 
             // SysBotHunterCoordXLabel
             // 
@@ -964,7 +947,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotMonster1HPCount.Name = "SysBotMonster1HPCount";
             this.SysBotMonster1HPCount.Size = new System.Drawing.Size(78, 23);
             this.SysBotMonster1HPCount.TabIndex = 8;
-            this.SysBotMonster1HPCount.ValueChanged += new System.EventHandler(this.SysBotMonster1HPCount_ValueChanged);
             // 
             // SysBotMonsterHPLabel
             // 
@@ -1067,7 +1049,6 @@ namespace MonstieHuntieHax.WinForms
             0,
             0,
             0});
-            this.SysBotHunterHPCount.ValueChanged += new System.EventHandler(this.SysBotHunterHPCount_ValueChanged);
             // 
             // SysBotHunterHP
             // 
