@@ -42,20 +42,17 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotTabControl = new System.Windows.Forms.TabControl();
             this.TabSysBotPlayer = new System.Windows.Forms.TabPage();
             this.GroupSysBotCurrencies = new System.Windows.Forms.GroupBox();
-            this.SysBotPointsCount = new System.Windows.Forms.NumericUpDown();
-            this.LabelSysBotPoints = new System.Windows.Forms.Label();
             this.SysBotZeniCount = new System.Windows.Forms.NumericUpDown();
             this.LabelSysBotZeni = new System.Windows.Forms.Label();
+            this.TabSysBotItems = new System.Windows.Forms.TabPage();
             this.TabSysBotMonsties = new System.Windows.Forms.TabPage();
             this.TabSysBotLog = new System.Windows.Forms.TabPage();
             this.SysBotLog = new System.Windows.Forms.RichTextBox();
-            this.TabSysBotItems = new System.Windows.Forms.TabPage();
             this.GroupSysBotConnection.SuspendLayout();
             this.GroupSysBotStatus.SuspendLayout();
             this.SysBotTabControl.SuspendLayout();
             this.TabSysBotPlayer.SuspendLayout();
             this.GroupSysBotCurrencies.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotPointsCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotZeniCount)).BeginInit();
             this.TabSysBotLog.SuspendLayout();
             this.SuspendLayout();
@@ -214,44 +211,16 @@ namespace MonstieHuntieHax.WinForms
             // GroupSysBotCurrencies
             // 
             this.GroupSysBotCurrencies.AccessibleName = "GroupSysBotCurrencies";
-            this.GroupSysBotCurrencies.Controls.Add(this.SysBotPointsCount);
-            this.GroupSysBotCurrencies.Controls.Add(this.LabelSysBotPoints);
             this.GroupSysBotCurrencies.Controls.Add(this.SysBotZeniCount);
             this.GroupSysBotCurrencies.Controls.Add(this.LabelSysBotZeni);
-            this.GroupSysBotCurrencies.Location = new System.Drawing.Point(275, 329);
+            this.GroupSysBotCurrencies.Location = new System.Drawing.Point(451, 409);
             this.GroupSysBotCurrencies.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.GroupSysBotCurrencies.Name = "GroupSysBotCurrencies";
             this.GroupSysBotCurrencies.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.GroupSysBotCurrencies.Size = new System.Drawing.Size(167, 82);
+            this.GroupSysBotCurrencies.Size = new System.Drawing.Size(167, 54);
             this.GroupSysBotCurrencies.TabIndex = 10;
             this.GroupSysBotCurrencies.TabStop = false;
             this.GroupSysBotCurrencies.Text = "Currencies";
-            // 
-            // SysBotPointsCount
-            // 
-            this.SysBotPointsCount.AccessibleName = "SysBotPointsCount";
-            this.SysBotPointsCount.Enabled = false;
-            this.SysBotPointsCount.Location = new System.Drawing.Point(63, 51);
-            this.SysBotPointsCount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.SysBotPointsCount.Maximum = new decimal(new int[] {
-            99999999,
-            0,
-            0,
-            0});
-            this.SysBotPointsCount.Name = "SysBotPointsCount";
-            this.SysBotPointsCount.Size = new System.Drawing.Size(97, 23);
-            this.SysBotPointsCount.TabIndex = 3;
-            // 
-            // LabelSysBotPoints
-            // 
-            this.LabelSysBotPoints.AccessibleName = "LabelSysBotPoints";
-            this.LabelSysBotPoints.AutoSize = true;
-            this.LabelSysBotPoints.Location = new System.Drawing.Point(7, 53);
-            this.LabelSysBotPoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LabelSysBotPoints.Name = "LabelSysBotPoints";
-            this.LabelSysBotPoints.Size = new System.Drawing.Size(43, 15);
-            this.LabelSysBotPoints.TabIndex = 2;
-            this.LabelSysBotPoints.Text = "Points:";
             // 
             // SysBotZeniCount
             // 
@@ -279,6 +248,18 @@ namespace MonstieHuntieHax.WinForms
             this.LabelSysBotZeni.Size = new System.Drawing.Size(33, 15);
             this.LabelSysBotZeni.TabIndex = 0;
             this.LabelSysBotZeni.Text = "Zeni:";
+            // 
+            // TabSysBotItems
+            // 
+            this.TabSysBotItems.AccessibleName = "TabSysBotItems";
+            this.TabSysBotItems.Location = new System.Drawing.Point(4, 24);
+            this.TabSysBotItems.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.TabSysBotItems.Name = "TabSysBotItems";
+            this.TabSysBotItems.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.TabSysBotItems.Size = new System.Drawing.Size(622, 469);
+            this.TabSysBotItems.TabIndex = 1;
+            this.TabSysBotItems.Text = "Items";
+            this.TabSysBotItems.UseVisualStyleBackColor = true;
             // 
             // TabSysBotMonsties
             // 
@@ -316,18 +297,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotLog.TabIndex = 5;
             this.SysBotLog.Text = "Started application.";
             // 
-            // TabSysBotItems
-            // 
-            this.TabSysBotItems.AccessibleName = "TabSysBotItems";
-            this.TabSysBotItems.Location = new System.Drawing.Point(4, 24);
-            this.TabSysBotItems.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.TabSysBotItems.Name = "TabSysBotItems";
-            this.TabSysBotItems.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.TabSysBotItems.Size = new System.Drawing.Size(622, 469);
-            this.TabSysBotItems.TabIndex = 1;
-            this.TabSysBotItems.Text = "Items";
-            this.TabSysBotItems.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -348,7 +317,6 @@ namespace MonstieHuntieHax.WinForms
             this.TabSysBotPlayer.ResumeLayout(false);
             this.GroupSysBotCurrencies.ResumeLayout(false);
             this.GroupSysBotCurrencies.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotPointsCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SysBotZeniCount)).EndInit();
             this.TabSysBotLog.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -374,8 +342,6 @@ namespace MonstieHuntieHax.WinForms
         private System.Windows.Forms.Label StatusConnectionLabel;
         private System.Windows.Forms.GroupBox GroupSysBotCurrencies;
         private System.Windows.Forms.Label LabelSysBotZeni;
-        private System.Windows.Forms.NumericUpDown SysBotPointsCount;
-        private System.Windows.Forms.Label LabelSysBotPoints;
         private System.Windows.Forms.NumericUpDown SysBotZeniCount;
         private System.Windows.Forms.TabPage TabSysBotItems;
     }
