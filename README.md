@@ -1,6 +1,6 @@
 # MonstieHuntieHax
 This is a WIP memory editor for Monstie Huntie Stories 2 for Nintendo Switch.
-Check the [releases page](https://github.com/Glazelf/MonstieHuntieHax/releases) for releases and the [Issues page](https://github.com/Glazelf/MonstieHuntieHax/issues) for general progress.
+Check the [releases page](https://github.com/Glazelf/MonstieHuntieHax/releases) for releases and the [issues page](https://github.com/Glazelf/MonstieHuntieHax/issues) for general progress.
 
 ## Risks
 There is no easy way for us to test the ban risks of using this tool, especially online.  
