@@ -10,7 +10,7 @@
         /// Demo pointers
         /// </summary>
         // General
-        public const string PointerZeni = "[[[main+210F0F0]+320]+968]+110";
+        public const string PointerZeni = "[heap+40731E00]";
 
 
 
