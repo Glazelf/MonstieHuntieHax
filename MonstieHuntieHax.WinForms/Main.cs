@@ -68,7 +68,7 @@ namespace MonstieHuntieHax.WinForms
                 StatusConnection.Text = "Connected";
                 Connected = true;
                 ButtonConnect.Text = "Disconnect";
-                SysBotLog.Text += Environment.NewLine + "Successfully connected.";
+                SysBotLog.Text += Environment.NewLine + "Connected.";
             }
             else
             {
@@ -85,7 +85,7 @@ namespace MonstieHuntieHax.WinForms
                 StatusConnection.Text = "Disconnected";
                 Connected = false;
                 ButtonConnect.Text = "Connect";
-                SysBotLog.Text += Environment.NewLine + "Successfully disconnected.";
+                SysBotLog.Text += Environment.NewLine + "Disconnected.";
             }
         }
         private void ButtonSysbotRead_Click(object sender, EventArgs e)
@@ -95,6 +95,7 @@ namespace MonstieHuntieHax.WinForms
 
         private void SysBotZeniCount_ValueChanged(object sender, EventArgs e)
         {
+            SysBotLog.Text += Environment.NewLine + $"Writing Zeni: {SysBotZeniCount.Value}";
             byte[] ZeniBytes = BitConverter.GetBytes((uint)SysBotZeniCount.Value);
             PointerHandler.WritePointer(sb, DataOffsets.PointerZeni, ZeniBytes);
         }
@@ -113,7 +114,7 @@ namespace MonstieHuntieHax.WinForms
                 LogError(ex);
             }
 
-            SysBotLog.Text += Environment.NewLine + "Successfully loaded values.";
+            SysBotLog.Text += Environment.NewLine + "Loaded values.";
         }
 
         public void LogError(Exception ex)
