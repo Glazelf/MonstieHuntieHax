@@ -96,7 +96,6 @@ namespace MonstieHuntieHax.WinForms
         private void SysBotZeniCount_ValueChanged(object sender, EventArgs e)
         {
             byte[] ZeniBytes = BitConverter.GetBytes((uint)SysBotZeniCount.Value);
-            SysBotLog.Text += Environment.NewLine + (uint)SysBotZeniCount.Value;
             PointerHandler.WritePointer(sb, DataOffsets.PointerZeni, ZeniBytes);
         }
 
@@ -105,7 +104,6 @@ namespace MonstieHuntieHax.WinForms
             try
             {
                 uint Zeni = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerZeni);
-                SysBotLog.Text += Environment.NewLine + Zeni;
                 SysBotZeniCount.Value = Zeni;
                 SysBotZeniCount.Enabled = true;
             }
