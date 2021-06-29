@@ -19,15 +19,14 @@ namespace MonstieHuntieHax.WinForms
             InitializeComponent();
         }
 
-        public Injector SwitchInjector = new Injector();
-        readonly SwitchConnectionConfig cfg = new SwitchConnectionConfig();
-        readonly PointerHandler PointerHandler = new PointerHandler();
+        public Injector SwitchInjector = new();
+        readonly SwitchConnectionConfig cfg = new();
+        readonly PointerHandler PointerHandler = new();
         public bool Connected = false;
         public ISwitchConnectionSync sb;
 
         // Declare offsets
 
-        ulong OffsetZeni;
 
         public void SysBotUI_Load(object sender, EventArgs e)
         {
@@ -96,16 +95,18 @@ namespace MonstieHuntieHax.WinForms
 
         private void SysBotZeniCount_ValueChanged(object sender, EventArgs e)
         {
-            BytesHandler.WriteFloat((float)SysBotZeniCount.Value, OffsetZeni, sb);
+            byte[] ZeniBytes = BitConverter.GetBytes((uint)SysBotZeniCount.Value);
+            SysBotLog.Text += Environment.NewLine + (uint)SysBotZeniCount.Value;
+            PointerHandler.WritePointer(sb, DataOffsets.PointerZeni, ZeniBytes);
         }
 
         private void ReloadValues()
         {
             try
             {
-                OffsetZeni = PointerHandler.GetPointerAddress(sb, DataOffsets.PointerZeni);
-                float Zeni = BitConverter.ToSingle(sb.ReadBytesAbsolute(OffsetZeni, 4), 0);
-                SysBotZeniCount.Value = (decimal)Zeni;
+                uint Zeni = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerZeni);
+                SysBotLog.Text += Environment.NewLine + Zeni;
+                SysBotZeniCount.Value = Zeni;
                 SysBotZeniCount.Enabled = true;
             }
             catch (Exception ex)
