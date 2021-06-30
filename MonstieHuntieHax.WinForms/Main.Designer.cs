@@ -42,22 +42,22 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotTabControl = new System.Windows.Forms.TabControl();
             this.TabSysBotPlayer = new System.Windows.Forms.TabPage();
             this.GroupSysBotCurrencies = new System.Windows.Forms.GroupBox();
-            this.SysBotZeniCount = new System.Windows.Forms.NumericUpDown();
+            this.CountSysBotZeni = new System.Windows.Forms.NumericUpDown();
             this.LabelSysBotZeni = new System.Windows.Forms.Label();
             this.TabSysBotItems = new System.Windows.Forms.TabPage();
             this.TabSysBotMonsties = new System.Windows.Forms.TabPage();
             this.TabSysBotLog = new System.Windows.Forms.TabPage();
             this.SysBotLog = new System.Windows.Forms.RichTextBox();
             this.LabelSysBotBottleCaps = new System.Windows.Forms.Label();
-            this.SysBotBottleCapCount = new System.Windows.Forms.NumericUpDown();
+            this.CountSysBotBottleCaps = new System.Windows.Forms.NumericUpDown();
             this.GroupSysBotConnection.SuspendLayout();
             this.GroupSysBotStatus.SuspendLayout();
             this.SysBotTabControl.SuspendLayout();
             this.TabSysBotPlayer.SuspendLayout();
             this.GroupSysBotCurrencies.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotZeniCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountSysBotZeni)).BeginInit();
             this.TabSysBotLog.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotBottleCapCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountSysBotBottleCaps)).BeginInit();
             this.SuspendLayout();
             // 
             // TextBoxIP
@@ -214,9 +214,9 @@ namespace MonstieHuntieHax.WinForms
             // GroupSysBotCurrencies
             // 
             this.GroupSysBotCurrencies.AccessibleName = "GroupSysBotCurrencies";
-            this.GroupSysBotCurrencies.Controls.Add(this.SysBotBottleCapCount);
+            this.GroupSysBotCurrencies.Controls.Add(this.CountSysBotBottleCaps);
             this.GroupSysBotCurrencies.Controls.Add(this.LabelSysBotBottleCaps);
-            this.GroupSysBotCurrencies.Controls.Add(this.SysBotZeniCount);
+            this.GroupSysBotCurrencies.Controls.Add(this.CountSysBotZeni);
             this.GroupSysBotCurrencies.Controls.Add(this.LabelSysBotZeni);
             this.GroupSysBotCurrencies.Location = new System.Drawing.Point(451, 384);
             this.GroupSysBotCurrencies.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -227,21 +227,21 @@ namespace MonstieHuntieHax.WinForms
             this.GroupSysBotCurrencies.TabStop = false;
             this.GroupSysBotCurrencies.Text = "Currencies";
             // 
-            // SysBotZeniCount
+            // CountSysBotZeni
             // 
-            this.SysBotZeniCount.AccessibleName = "SysBotZeniCount";
-            this.SysBotZeniCount.Enabled = false;
-            this.SysBotZeniCount.Location = new System.Drawing.Point(63, 18);
-            this.SysBotZeniCount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.SysBotZeniCount.Maximum = new decimal(new int[] {
+            this.CountSysBotZeni.AccessibleName = "CountSysBotZeni";
+            this.CountSysBotZeni.Enabled = false;
+            this.CountSysBotZeni.Location = new System.Drawing.Point(63, 18);
+            this.CountSysBotZeni.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.CountSysBotZeni.Maximum = new decimal(new int[] {
             -1,
             0,
             0,
             0});
-            this.SysBotZeniCount.Name = "SysBotZeniCount";
-            this.SysBotZeniCount.Size = new System.Drawing.Size(97, 23);
-            this.SysBotZeniCount.TabIndex = 1;
-            this.SysBotZeniCount.ValueChanged += new System.EventHandler(this.SysBotZeniCount_ValueChanged);
+            this.CountSysBotZeni.Name = "CountSysBotZeni";
+            this.CountSysBotZeni.Size = new System.Drawing.Size(97, 23);
+            this.CountSysBotZeni.TabIndex = 1;
+            this.CountSysBotZeni.ValueChanged += new System.EventHandler(this.SysBotZeniCount_ValueChanged);
             // 
             // LabelSysBotZeni
             // 
@@ -312,18 +312,20 @@ namespace MonstieHuntieHax.WinForms
             this.LabelSysBotBottleCaps.TabIndex = 5;
             this.LabelSysBotBottleCaps.Text = "Bottle Caps:";
             // 
-            // SysBotBottleCapCount
+            // CountSysBotBottleCaps
             // 
-            this.SysBotBottleCapCount.AccessibleName = "SysBotBottleCapCount";
-            this.SysBotBottleCapCount.Location = new System.Drawing.Point(83, 47);
-            this.SysBotBottleCapCount.Maximum = new decimal(new int[] {
+            this.CountSysBotBottleCaps.AccessibleName = "CountSysBotBottleCaps";
+            this.CountSysBotBottleCaps.Enabled = false;
+            this.CountSysBotBottleCaps.Location = new System.Drawing.Point(83, 47);
+            this.CountSysBotBottleCaps.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
-            this.SysBotBottleCapCount.Name = "SysBotBottleCapCount";
-            this.SysBotBottleCapCount.Size = new System.Drawing.Size(77, 23);
-            this.SysBotBottleCapCount.TabIndex = 6;
+            this.CountSysBotBottleCaps.Name = "CountSysBotBottleCaps";
+            this.CountSysBotBottleCaps.Size = new System.Drawing.Size(77, 23);
+            this.CountSysBotBottleCaps.TabIndex = 6;
+            this.CountSysBotBottleCaps.ValueChanged += new System.EventHandler(this.CountSysBotBottleCaps_ValueChanged);
             // 
             // Main
             // 
@@ -345,9 +347,9 @@ namespace MonstieHuntieHax.WinForms
             this.TabSysBotPlayer.ResumeLayout(false);
             this.GroupSysBotCurrencies.ResumeLayout(false);
             this.GroupSysBotCurrencies.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotZeniCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountSysBotZeni)).EndInit();
             this.TabSysBotLog.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SysBotBottleCapCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CountSysBotBottleCaps)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -371,9 +373,9 @@ namespace MonstieHuntieHax.WinForms
         private System.Windows.Forms.Label StatusConnectionLabel;
         private System.Windows.Forms.GroupBox GroupSysBotCurrencies;
         private System.Windows.Forms.Label LabelSysBotZeni;
-        private System.Windows.Forms.NumericUpDown SysBotZeniCount;
+        private System.Windows.Forms.NumericUpDown CountSysBotZeni;
         private System.Windows.Forms.TabPage TabSysBotItems;
-        private System.Windows.Forms.NumericUpDown SysBotBottleCapCount;
+        private System.Windows.Forms.NumericUpDown CountSysBotBottleCaps;
         private System.Windows.Forms.Label LabelSysBotBottleCaps;
     }
 }

@@ -79,7 +79,8 @@ namespace MonstieHuntieHax.WinForms
                 TextBoxPort.Enabled = true;
                 ButtonSysbotRead.Enabled = false;
                 // Player
-                SysBotZeniCount.Enabled = false;
+                CountSysBotZeni.Enabled = false;
+                CountSysBotBottleCaps.Enabled = false;
 
                 StatusConnection.ForeColor = Color.Red;
                 StatusConnection.Text = "Disconnected";
@@ -95,9 +96,16 @@ namespace MonstieHuntieHax.WinForms
 
         private void SysBotZeniCount_ValueChanged(object sender, EventArgs e)
         {
-            SysBotLog.Text += Environment.NewLine + $"Writing Zeni: {SysBotZeniCount.Value}";
-            byte[] ZeniBytes = BitConverter.GetBytes((uint)SysBotZeniCount.Value);
+            SysBotLog.Text += Environment.NewLine + $"Writing Zeni: {CountSysBotZeni.Value}";
+            byte[] ZeniBytes = BitConverter.GetBytes((uint)CountSysBotZeni.Value);
             PointerHandler.WritePointer(sb, DataOffsets.PointerZeni, ZeniBytes);
+        }
+
+        private void CountSysBotBottleCaps_ValueChanged(object sender, EventArgs e)
+        {
+            SysBotLog.Text += Environment.NewLine + $"Writing Bottle Caps: {CountSysBotBottleCaps.Value}";
+            byte[] BottleCapsBytes = BitConverter.GetBytes((uint)CountSysBotBottleCaps.Value);
+            PointerHandler.WritePointer(sb, DataOffsets.PointerBottleCaps, BottleCapsBytes);
         }
 
         private void ReloadValues()
@@ -105,12 +113,16 @@ namespace MonstieHuntieHax.WinForms
             try
             {
                 uint Zeni = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerZeni);
-                SysBotZeniCount.Value = Zeni;
-                SysBotZeniCount.Enabled = true;
+                CountSysBotZeni.Value = Zeni;
+                CountSysBotZeni.Enabled = true;
+                uint BottleCaps = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerBottleCaps);
+                CountSysBotBottleCaps.Value = BottleCaps;
+                CountSysBotBottleCaps.Enabled = true;
             }
             catch (Exception ex)
             {
-                SysBotZeniCount.Enabled = false;
+                CountSysBotZeni.Enabled = false;
+                CountSysBotBottleCaps.Enabled = false;
                 LogError(ex);
             }
 
