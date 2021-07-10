@@ -10,8 +10,8 @@
         /// Demo pointers
         /// </summary>
         // General
-        public const string PointerZeni = "[heap+00486CD5A4]";
-        public const string PointerBottleCaps = "[heap+00484EC414]";
+        public const string PointerZeni = "[heap+40732670]";
+        public const string PointerBottleCaps = "[heap+407335FE]";
 
         /// <summary>
         /// Distances
