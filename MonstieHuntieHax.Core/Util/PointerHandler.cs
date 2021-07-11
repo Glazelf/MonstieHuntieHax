@@ -77,7 +77,7 @@ namespace MonstieHuntieHax.Core
             return address;
         }
 
-        public static void WritePointer(ISwitchConnectionSync sb, string ptr, byte[] data )
+        public static void WritePointer(ISwitchConnectionSync sb, string ptr, byte[] data)
         {
             uint finadd = 0;
             if (!ptr.EndsWith("]"))
@@ -110,7 +110,8 @@ namespace MonstieHuntieHax.Core
             if (ptr.Contains("heap"))
             {
                 sb.WriteBytes(data, initaddress);
-            } else
+            }
+            else
             {
                 sb.WriteBytesMain(data, address);
             }
