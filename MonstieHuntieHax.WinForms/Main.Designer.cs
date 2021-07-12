@@ -42,22 +42,22 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotTabControl = new System.Windows.Forms.TabControl();
             this.TabSysBotPlayer = new System.Windows.Forms.TabPage();
             this.GroupSysBotCurrencies = new System.Windows.Forms.GroupBox();
+            this.CountSysBotBottleCaps = new System.Windows.Forms.NumericUpDown();
+            this.LabelSysBotBottleCaps = new System.Windows.Forms.Label();
             this.CountSysBotZeni = new System.Windows.Forms.NumericUpDown();
             this.LabelSysBotZeni = new System.Windows.Forms.Label();
             this.TabSysBotItems = new System.Windows.Forms.TabPage();
             this.TabSysBotMonsties = new System.Windows.Forms.TabPage();
             this.TabSysBotLog = new System.Windows.Forms.TabPage();
             this.SysBotLog = new System.Windows.Forms.RichTextBox();
-            this.LabelSysBotBottleCaps = new System.Windows.Forms.Label();
-            this.CountSysBotBottleCaps = new System.Windows.Forms.NumericUpDown();
             this.GroupSysBotConnection.SuspendLayout();
             this.GroupSysBotStatus.SuspendLayout();
             this.SysBotTabControl.SuspendLayout();
             this.TabSysBotPlayer.SuspendLayout();
             this.GroupSysBotCurrencies.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CountSysBotBottleCaps)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CountSysBotZeni)).BeginInit();
             this.TabSysBotLog.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CountSysBotBottleCaps)).BeginInit();
             this.SuspendLayout();
             // 
             // TextBoxIP
@@ -227,6 +227,31 @@ namespace MonstieHuntieHax.WinForms
             this.GroupSysBotCurrencies.TabStop = false;
             this.GroupSysBotCurrencies.Text = "Currencies";
             // 
+            // CountSysBotBottleCaps
+            // 
+            this.CountSysBotBottleCaps.AccessibleName = "CountSysBotBottleCaps";
+            this.CountSysBotBottleCaps.Enabled = false;
+            this.CountSysBotBottleCaps.Location = new System.Drawing.Point(83, 47);
+            this.CountSysBotBottleCaps.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.CountSysBotBottleCaps.Name = "CountSysBotBottleCaps";
+            this.CountSysBotBottleCaps.Size = new System.Drawing.Size(77, 23);
+            this.CountSysBotBottleCaps.TabIndex = 6;
+            this.CountSysBotBottleCaps.ValueChanged += new System.EventHandler(this.CountSysBotBottleCaps_ValueChanged);
+            // 
+            // LabelSysBotBottleCaps
+            // 
+            this.LabelSysBotBottleCaps.AccessibleName = "LabelSysBotBottleCaps";
+            this.LabelSysBotBottleCaps.AutoSize = true;
+            this.LabelSysBotBottleCaps.Location = new System.Drawing.Point(7, 49);
+            this.LabelSysBotBottleCaps.Name = "LabelSysBotBottleCaps";
+            this.LabelSysBotBottleCaps.Size = new System.Drawing.Size(70, 15);
+            this.LabelSysBotBottleCaps.TabIndex = 5;
+            this.LabelSysBotBottleCaps.Text = "Bottle Caps:";
+            // 
             // CountSysBotZeni
             // 
             this.CountSysBotZeni.AccessibleName = "CountSysBotZeni";
@@ -302,31 +327,6 @@ namespace MonstieHuntieHax.WinForms
             this.SysBotLog.TabIndex = 5;
             this.SysBotLog.Text = "Started application.";
             // 
-            // LabelSysBotBottleCaps
-            // 
-            this.LabelSysBotBottleCaps.AccessibleName = "LabelSysBotBottleCaps";
-            this.LabelSysBotBottleCaps.AutoSize = true;
-            this.LabelSysBotBottleCaps.Location = new System.Drawing.Point(7, 49);
-            this.LabelSysBotBottleCaps.Name = "LabelSysBotBottleCaps";
-            this.LabelSysBotBottleCaps.Size = new System.Drawing.Size(70, 15);
-            this.LabelSysBotBottleCaps.TabIndex = 5;
-            this.LabelSysBotBottleCaps.Text = "Bottle Caps:";
-            // 
-            // CountSysBotBottleCaps
-            // 
-            this.CountSysBotBottleCaps.AccessibleName = "CountSysBotBottleCaps";
-            this.CountSysBotBottleCaps.Enabled = false;
-            this.CountSysBotBottleCaps.Location = new System.Drawing.Point(83, 47);
-            this.CountSysBotBottleCaps.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this.CountSysBotBottleCaps.Name = "CountSysBotBottleCaps";
-            this.CountSysBotBottleCaps.Size = new System.Drawing.Size(77, 23);
-            this.CountSysBotBottleCaps.TabIndex = 6;
-            this.CountSysBotBottleCaps.ValueChanged += new System.EventHandler(this.CountSysBotBottleCaps_ValueChanged);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -347,9 +347,9 @@ namespace MonstieHuntieHax.WinForms
             this.TabSysBotPlayer.ResumeLayout(false);
             this.GroupSysBotCurrencies.ResumeLayout(false);
             this.GroupSysBotCurrencies.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CountSysBotBottleCaps)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CountSysBotZeni)).EndInit();
             this.TabSysBotLog.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CountSysBotBottleCaps)).EndInit();
             this.ResumeLayout(false);
 
         }
