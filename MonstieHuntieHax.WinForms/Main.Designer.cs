@@ -259,7 +259,7 @@ namespace MonstieHuntieHax.WinForms
             this.CountSysBotZeni.Location = new System.Drawing.Point(63, 18);
             this.CountSysBotZeni.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.CountSysBotZeni.Maximum = new decimal(new int[] {
-            -1,
+            9999999,
             0,
             0,
             0});
