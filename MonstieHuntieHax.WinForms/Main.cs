@@ -108,6 +108,56 @@ namespace MonstieHuntieHax.WinForms
             PointerHandler.WritePointer(sb, DataOffsets.PointerBottleCaps, BottleCapsBytes);
         }
 
+        private void CountSysBotCharmTraining_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotCharmGathering_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotCharmLucky_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotCharmFinding_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotCharmMounting_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotCharmSelling_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotCharmBuying_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotCharmAdamant_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotCharmMight_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotCharmRecovery_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void ReloadValues()
         {
             try

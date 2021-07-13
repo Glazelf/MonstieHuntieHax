@@ -331,25 +331,25 @@ namespace MonstieHuntieHax.WinForms
             // 
             this.GroupSysBotCharms.AccessibleName = "GroupSysBotCharms";
             this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmAdamant);
-            this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmMight);
-            this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmGathering);
-            this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmTraining);
+            this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmRecovery);
+            this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmBuying);
+            this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmRecovery);
+            this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmLucky);
+            this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmBuying);
             this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmMounting);
             this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmSelling);
+            this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmMight);
+            this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmLucky);
+            this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmSelling);
+            this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmGathering);
+            this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmTraining);
             this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmFinding);
+            this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmMounting);
+            this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmFinding);
             this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmAdamant);
             this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmMight);
             this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmGathering);
             this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmTraining);
-            this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmMounting);
-            this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmSelling);
-            this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmRecovery);
-            this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmFinding);
-            this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmBuying);
-            this.GroupSysBotCharms.Controls.Add(this.CountSysBotCharmLucky);
-            this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmRecovery);
-            this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmBuying);
-            this.GroupSysBotCharms.Controls.Add(this.LabelSysBotCharmLucky);
             this.GroupSysBotCharms.Location = new System.Drawing.Point(6, 6);
             this.GroupSysBotCharms.Name = "GroupSysBotCharms";
             this.GroupSysBotCharms.Size = new System.Drawing.Size(122, 306);
@@ -361,7 +361,7 @@ namespace MonstieHuntieHax.WinForms
             // 
             this.CountSysBotCharmAdamant.AccessibleName = "CountSysBotCharmAdamant";
             this.CountSysBotCharmAdamant.Enabled = false;
-            this.CountSysBotCharmAdamant.Location = new System.Drawing.Point(71, 278);
+            this.CountSysBotCharmAdamant.Location = new System.Drawing.Point(71, 218);
             this.CountSysBotCharmAdamant.Maximum = new decimal(new int[] {
             999,
             0,
@@ -370,12 +370,13 @@ namespace MonstieHuntieHax.WinForms
             this.CountSysBotCharmAdamant.Name = "CountSysBotCharmAdamant";
             this.CountSysBotCharmAdamant.Size = new System.Drawing.Size(43, 23);
             this.CountSysBotCharmAdamant.TabIndex = 26;
+            this.CountSysBotCharmAdamant.ValueChanged += new System.EventHandler(this.CountSysBotCharmAdamant_ValueChanged);
             // 
             // CountSysBotCharmMight
             // 
             this.CountSysBotCharmMight.AccessibleName = "CountSysBotCharmMight";
             this.CountSysBotCharmMight.Enabled = false;
-            this.CountSysBotCharmMight.Location = new System.Drawing.Point(71, 249);
+            this.CountSysBotCharmMight.Location = new System.Drawing.Point(71, 247);
             this.CountSysBotCharmMight.Maximum = new decimal(new int[] {
             999,
             0,
@@ -384,12 +385,13 @@ namespace MonstieHuntieHax.WinForms
             this.CountSysBotCharmMight.Name = "CountSysBotCharmMight";
             this.CountSysBotCharmMight.Size = new System.Drawing.Size(43, 23);
             this.CountSysBotCharmMight.TabIndex = 25;
+            this.CountSysBotCharmMight.ValueChanged += new System.EventHandler(this.CountSysBotCharmMight_ValueChanged);
             // 
             // CountSysBotCharmGathering
             // 
             this.CountSysBotCharmGathering.AccessibleName = "CountSysBotCharmGathering";
             this.CountSysBotCharmGathering.Enabled = false;
-            this.CountSysBotCharmGathering.Location = new System.Drawing.Point(71, 220);
+            this.CountSysBotCharmGathering.Location = new System.Drawing.Point(71, 44);
             this.CountSysBotCharmGathering.Maximum = new decimal(new int[] {
             999,
             0,
@@ -398,12 +400,13 @@ namespace MonstieHuntieHax.WinForms
             this.CountSysBotCharmGathering.Name = "CountSysBotCharmGathering";
             this.CountSysBotCharmGathering.Size = new System.Drawing.Size(43, 23);
             this.CountSysBotCharmGathering.TabIndex = 24;
+            this.CountSysBotCharmGathering.ValueChanged += new System.EventHandler(this.CountSysBotCharmGathering_ValueChanged);
             // 
             // CountSysBotCharmTraining
             // 
             this.CountSysBotCharmTraining.AccessibleName = "CountSysBotCharmTraining";
             this.CountSysBotCharmTraining.Enabled = false;
-            this.CountSysBotCharmTraining.Location = new System.Drawing.Point(71, 191);
+            this.CountSysBotCharmTraining.Location = new System.Drawing.Point(71, 17);
             this.CountSysBotCharmTraining.Maximum = new decimal(new int[] {
             999,
             0,
@@ -412,12 +415,13 @@ namespace MonstieHuntieHax.WinForms
             this.CountSysBotCharmTraining.Name = "CountSysBotCharmTraining";
             this.CountSysBotCharmTraining.Size = new System.Drawing.Size(43, 23);
             this.CountSysBotCharmTraining.TabIndex = 23;
+            this.CountSysBotCharmTraining.ValueChanged += new System.EventHandler(this.CountSysBotCharmTraining_ValueChanged);
             // 
             // CountSysBotCharmMounting
             // 
             this.CountSysBotCharmMounting.AccessibleName = "CountSysBotCharmMounting";
             this.CountSysBotCharmMounting.Enabled = false;
-            this.CountSysBotCharmMounting.Location = new System.Drawing.Point(71, 162);
+            this.CountSysBotCharmMounting.Location = new System.Drawing.Point(71, 131);
             this.CountSysBotCharmMounting.Maximum = new decimal(new int[] {
             999,
             0,
@@ -426,12 +430,13 @@ namespace MonstieHuntieHax.WinForms
             this.CountSysBotCharmMounting.Name = "CountSysBotCharmMounting";
             this.CountSysBotCharmMounting.Size = new System.Drawing.Size(43, 23);
             this.CountSysBotCharmMounting.TabIndex = 22;
+            this.CountSysBotCharmMounting.ValueChanged += new System.EventHandler(this.CountSysBotCharmMounting_ValueChanged);
             // 
             // CountSysBotCharmSelling
             // 
             this.CountSysBotCharmSelling.AccessibleName = "CountSysBotCharmSelling";
             this.CountSysBotCharmSelling.Enabled = false;
-            this.CountSysBotCharmSelling.Location = new System.Drawing.Point(71, 133);
+            this.CountSysBotCharmSelling.Location = new System.Drawing.Point(71, 160);
             this.CountSysBotCharmSelling.Maximum = new decimal(new int[] {
             999,
             0,
@@ -440,12 +445,13 @@ namespace MonstieHuntieHax.WinForms
             this.CountSysBotCharmSelling.Name = "CountSysBotCharmSelling";
             this.CountSysBotCharmSelling.Size = new System.Drawing.Size(43, 23);
             this.CountSysBotCharmSelling.TabIndex = 21;
+            this.CountSysBotCharmSelling.ValueChanged += new System.EventHandler(this.CountSysBotCharmSelling_ValueChanged);
             // 
             // CountSysBotCharmFinding
             // 
             this.CountSysBotCharmFinding.AccessibleName = "CountSysBotCharmFinding";
             this.CountSysBotCharmFinding.Enabled = false;
-            this.CountSysBotCharmFinding.Location = new System.Drawing.Point(71, 104);
+            this.CountSysBotCharmFinding.Location = new System.Drawing.Point(71, 102);
             this.CountSysBotCharmFinding.Maximum = new decimal(new int[] {
             999,
             0,
@@ -454,12 +460,13 @@ namespace MonstieHuntieHax.WinForms
             this.CountSysBotCharmFinding.Name = "CountSysBotCharmFinding";
             this.CountSysBotCharmFinding.Size = new System.Drawing.Size(43, 23);
             this.CountSysBotCharmFinding.TabIndex = 20;
+            this.CountSysBotCharmFinding.ValueChanged += new System.EventHandler(this.CountSysBotCharmFinding_ValueChanged);
             // 
             // LabelSysBotCharmAdamant
             // 
             this.LabelSysBotCharmAdamant.AccessibleName = "LabelSysBotCharmAdamant";
             this.LabelSysBotCharmAdamant.AutoSize = true;
-            this.LabelSysBotCharmAdamant.Location = new System.Drawing.Point(7, 280);
+            this.LabelSysBotCharmAdamant.Location = new System.Drawing.Point(7, 220);
             this.LabelSysBotCharmAdamant.Name = "LabelSysBotCharmAdamant";
             this.LabelSysBotCharmAdamant.Size = new System.Drawing.Size(59, 15);
             this.LabelSysBotCharmAdamant.TabIndex = 19;
@@ -469,7 +476,7 @@ namespace MonstieHuntieHax.WinForms
             // 
             this.LabelSysBotCharmMight.AccessibleName = "LabelSysBotCharmMight";
             this.LabelSysBotCharmMight.AutoSize = true;
-            this.LabelSysBotCharmMight.Location = new System.Drawing.Point(7, 251);
+            this.LabelSysBotCharmMight.Location = new System.Drawing.Point(7, 249);
             this.LabelSysBotCharmMight.Name = "LabelSysBotCharmMight";
             this.LabelSysBotCharmMight.Size = new System.Drawing.Size(42, 15);
             this.LabelSysBotCharmMight.TabIndex = 18;
@@ -479,7 +486,7 @@ namespace MonstieHuntieHax.WinForms
             // 
             this.LabelSysBotCharmGathering.AccessibleName = "LabelSysBotCharmGathering";
             this.LabelSysBotCharmGathering.AutoSize = true;
-            this.LabelSysBotCharmGathering.Location = new System.Drawing.Point(7, 222);
+            this.LabelSysBotCharmGathering.Location = new System.Drawing.Point(7, 46);
             this.LabelSysBotCharmGathering.Name = "LabelSysBotCharmGathering";
             this.LabelSysBotCharmGathering.Size = new System.Drawing.Size(62, 15);
             this.LabelSysBotCharmGathering.TabIndex = 17;
@@ -489,7 +496,7 @@ namespace MonstieHuntieHax.WinForms
             // 
             this.LabelSysBotCharmTraining.AccessibleName = "LabelSysBotCharmTraining";
             this.LabelSysBotCharmTraining.AutoSize = true;
-            this.LabelSysBotCharmTraining.Location = new System.Drawing.Point(7, 193);
+            this.LabelSysBotCharmTraining.Location = new System.Drawing.Point(7, 19);
             this.LabelSysBotCharmTraining.Name = "LabelSysBotCharmTraining";
             this.LabelSysBotCharmTraining.Size = new System.Drawing.Size(52, 15);
             this.LabelSysBotCharmTraining.TabIndex = 16;
@@ -499,7 +506,7 @@ namespace MonstieHuntieHax.WinForms
             // 
             this.LabelSysBotCharmMounting.AccessibleName = "LabelSysBotCharmMounting";
             this.LabelSysBotCharmMounting.AutoSize = true;
-            this.LabelSysBotCharmMounting.Location = new System.Drawing.Point(7, 164);
+            this.LabelSysBotCharmMounting.Location = new System.Drawing.Point(7, 133);
             this.LabelSysBotCharmMounting.Name = "LabelSysBotCharmMounting";
             this.LabelSysBotCharmMounting.Size = new System.Drawing.Size(63, 15);
             this.LabelSysBotCharmMounting.TabIndex = 15;
@@ -509,7 +516,7 @@ namespace MonstieHuntieHax.WinForms
             // 
             this.LabelSysBotCharmSelling.AccessibleName = "LabelSysBotCharmSelling";
             this.LabelSysBotCharmSelling.AutoSize = true;
-            this.LabelSysBotCharmSelling.Location = new System.Drawing.Point(7, 135);
+            this.LabelSysBotCharmSelling.Location = new System.Drawing.Point(7, 162);
             this.LabelSysBotCharmSelling.Name = "LabelSysBotCharmSelling";
             this.LabelSysBotCharmSelling.Size = new System.Drawing.Size(45, 15);
             this.LabelSysBotCharmSelling.TabIndex = 14;
@@ -519,7 +526,7 @@ namespace MonstieHuntieHax.WinForms
             // 
             this.CountSysBotCharmRecovery.AccessibleName = "CountSysBotCharmRecovery";
             this.CountSysBotCharmRecovery.Enabled = false;
-            this.CountSysBotCharmRecovery.Location = new System.Drawing.Point(71, 75);
+            this.CountSysBotCharmRecovery.Location = new System.Drawing.Point(71, 276);
             this.CountSysBotCharmRecovery.Maximum = new decimal(new int[] {
             999,
             0,
@@ -528,12 +535,13 @@ namespace MonstieHuntieHax.WinForms
             this.CountSysBotCharmRecovery.Name = "CountSysBotCharmRecovery";
             this.CountSysBotCharmRecovery.Size = new System.Drawing.Size(43, 23);
             this.CountSysBotCharmRecovery.TabIndex = 13;
+            this.CountSysBotCharmRecovery.ValueChanged += new System.EventHandler(this.CountSysBotCharmRecovery_ValueChanged);
             // 
             // LabelSysBotCharmFinding
             // 
             this.LabelSysBotCharmFinding.AccessibleName = "LabelSysBotCharmFinding";
             this.LabelSysBotCharmFinding.AutoSize = true;
-            this.LabelSysBotCharmFinding.Location = new System.Drawing.Point(7, 106);
+            this.LabelSysBotCharmFinding.Location = new System.Drawing.Point(7, 104);
             this.LabelSysBotCharmFinding.Name = "LabelSysBotCharmFinding";
             this.LabelSysBotCharmFinding.Size = new System.Drawing.Size(50, 15);
             this.LabelSysBotCharmFinding.TabIndex = 12;
@@ -543,7 +551,7 @@ namespace MonstieHuntieHax.WinForms
             // 
             this.CountSysBotCharmBuying.AccessibleName = "CountSysBotCharmBuying";
             this.CountSysBotCharmBuying.Enabled = false;
-            this.CountSysBotCharmBuying.Location = new System.Drawing.Point(71, 46);
+            this.CountSysBotCharmBuying.Location = new System.Drawing.Point(71, 189);
             this.CountSysBotCharmBuying.Maximum = new decimal(new int[] {
             999,
             0,
@@ -552,12 +560,13 @@ namespace MonstieHuntieHax.WinForms
             this.CountSysBotCharmBuying.Name = "CountSysBotCharmBuying";
             this.CountSysBotCharmBuying.Size = new System.Drawing.Size(43, 23);
             this.CountSysBotCharmBuying.TabIndex = 11;
+            this.CountSysBotCharmBuying.ValueChanged += new System.EventHandler(this.CountSysBotCharmBuying_ValueChanged);
             // 
             // CountSysBotCharmLucky
             // 
             this.CountSysBotCharmLucky.AccessibleName = "CountSysBotCharmLucky";
             this.CountSysBotCharmLucky.Enabled = false;
-            this.CountSysBotCharmLucky.Location = new System.Drawing.Point(71, 17);
+            this.CountSysBotCharmLucky.Location = new System.Drawing.Point(71, 73);
             this.CountSysBotCharmLucky.Maximum = new decimal(new int[] {
             999,
             0,
@@ -566,12 +575,13 @@ namespace MonstieHuntieHax.WinForms
             this.CountSysBotCharmLucky.Name = "CountSysBotCharmLucky";
             this.CountSysBotCharmLucky.Size = new System.Drawing.Size(43, 23);
             this.CountSysBotCharmLucky.TabIndex = 10;
+            this.CountSysBotCharmLucky.ValueChanged += new System.EventHandler(this.CountSysBotCharmLucky_ValueChanged);
             // 
             // LabelSysBotCharmRecovery
             // 
             this.LabelSysBotCharmRecovery.AccessibleName = "LabelSysBotCharmRecovery";
             this.LabelSysBotCharmRecovery.AutoSize = true;
-            this.LabelSysBotCharmRecovery.Location = new System.Drawing.Point(7, 77);
+            this.LabelSysBotCharmRecovery.Location = new System.Drawing.Point(7, 278);
             this.LabelSysBotCharmRecovery.Name = "LabelSysBotCharmRecovery";
             this.LabelSysBotCharmRecovery.Size = new System.Drawing.Size(58, 15);
             this.LabelSysBotCharmRecovery.TabIndex = 9;
@@ -581,7 +591,7 @@ namespace MonstieHuntieHax.WinForms
             // 
             this.LabelSysBotCharmBuying.AccessibleName = "LabelSysBotCharmBuying";
             this.LabelSysBotCharmBuying.AutoSize = true;
-            this.LabelSysBotCharmBuying.Location = new System.Drawing.Point(7, 48);
+            this.LabelSysBotCharmBuying.Location = new System.Drawing.Point(7, 191);
             this.LabelSysBotCharmBuying.Name = "LabelSysBotCharmBuying";
             this.LabelSysBotCharmBuying.Size = new System.Drawing.Size(47, 15);
             this.LabelSysBotCharmBuying.TabIndex = 8;
@@ -591,7 +601,7 @@ namespace MonstieHuntieHax.WinForms
             // 
             this.LabelSysBotCharmLucky.AccessibleName = "LabelSysBotCharmLucky";
             this.LabelSysBotCharmLucky.AutoSize = true;
-            this.LabelSysBotCharmLucky.Location = new System.Drawing.Point(7, 19);
+            this.LabelSysBotCharmLucky.Location = new System.Drawing.Point(7, 75);
             this.LabelSysBotCharmLucky.Name = "LabelSysBotCharmLucky";
             this.LabelSysBotCharmLucky.Size = new System.Drawing.Size(41, 15);
             this.LabelSysBotCharmLucky.TabIndex = 7;
