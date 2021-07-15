@@ -23,7 +23,7 @@
         /// <summary>
         /// Unused (And possibly also deprecated)
         /// </summary>
-        // Rider HP, can't be updated like this mid-battle, have not found another good usecase for it yet.
-        // public const string PointerRiderHP = "[[[[[main+2161A70]+98]+148]+60]+10]"; // Might need to change to an address in heap.
+        // Rider HP for v1.0.3, can't be updated in battle so use is limited. Might need a heap address.
+        // public const string PointerRiderHP = "[[[[[main+2161A70]+98]+148]+60]+10]";
     }
 }
