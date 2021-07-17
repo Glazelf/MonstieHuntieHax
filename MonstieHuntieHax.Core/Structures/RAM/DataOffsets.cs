@@ -19,7 +19,9 @@
         public const string PointerSurrogateGem = "[heap+407328EE]";
         public const string PointerPowerPaintball = "[heap+40732B0E]";
         public const string PointerSuperWhetstone = "[heap+407327EE]";
+        public const string PointerMegaBarrelBomb = "[heap+40732B16]";
         public const string PointerWeaponSphereL = "[heap+4073550E]";
+        public const string PointerArmorSphereL = "[heap+407354F6]";
 
         /// <summary>
         /// Distances between offsets
