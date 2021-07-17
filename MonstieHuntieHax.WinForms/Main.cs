@@ -157,7 +157,7 @@ namespace MonstieHuntieHax.WinForms
         private void CountSysBotCharmMight_ValueChanged(object sender, EventArgs e)
         {
             SysBotLog.Text += Environment.NewLine + $"Writing Might Charms: {CountSysBotCharmMight.Value}";
-            WriteHeap(CountSysBotCharmGathering.Value, DataOffsets.PointerCharmGathering);
+            WriteHeap(CountSysBotCharmMight.Value, DataOffsets.PointerCharmMight);
         }
 
         private void CountSysBotCharmRecovery_ValueChanged(object sender, EventArgs e)
