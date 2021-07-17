@@ -94,6 +94,7 @@ namespace MonstieHuntieHax.WinForms
             ReloadValues();
         }
 
+        // Currencies
         private void SysBotZeniCount_ValueChanged(object sender, EventArgs e)
         {
             SysBotLog.Text += Environment.NewLine + $"Writing Zeni: {CountSysBotZeni.Value}";
@@ -106,6 +107,7 @@ namespace MonstieHuntieHax.WinForms
             WriteHeap(CountSysBotBottleCaps.Value, DataOffsets.PointerBottleCaps);
         }
 
+        // Charms
         private void CountSysBotCharmTraining_ValueChanged(object sender, EventArgs e)
         {
             SysBotLog.Text += Environment.NewLine + $"Writing Training Charms: {CountSysBotCharmTraining.Value}";
@@ -166,6 +168,7 @@ namespace MonstieHuntieHax.WinForms
             WriteHeap(CountSysBotCharmRecovery.Value, DataOffsets.PointerCharmRecovery);
         }
 
+        // Battle Items
         private void CountSysBotAncientPotion_ValueChanged(object sender, EventArgs e)
         {
 
@@ -201,6 +204,7 @@ namespace MonstieHuntieHax.WinForms
 
         }
 
+        // Crafting
         private void CountSysBotWeaponSphereL_ValueChanged(object sender, EventArgs e)
         {
 
@@ -276,6 +280,29 @@ namespace MonstieHuntieHax.WinForms
                 CountSysBotCharmAdamant.Enabled = false;
                 CountSysBotCharmMight.Enabled = false;
                 CountSysBotCharmRecovery.Enabled = false;
+                LogError(ex);
+            }
+            // Battle Items
+            try
+            {
+
+            } catch (Exception ex)
+            {
+                LogError(ex);
+            }
+            // Crafting 
+            try
+            {
+                uint WeaponSphereLs = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerWeaponSphereL);
+                CountSysBotWeaponSphereL.Value = WeaponSphereLs;
+                CountSysBotWeaponSphereL.Enabled = true;
+                uint ArmorSphereLs = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerArmorSphereL);
+                CountSysBotArmorSphereL.Value = ArmorSphereLs;
+                CountSysBotArmorSphereL.Enabled = true;
+            } catch (Exception ex)
+            {
+                CountSysBotWeaponSphereL.Enabled = false;
+                CountSysBotArmorSphereL.Enabled = false;
                 LogError(ex);
             }
 
