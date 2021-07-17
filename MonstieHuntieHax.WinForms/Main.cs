@@ -171,48 +171,57 @@ namespace MonstieHuntieHax.WinForms
         // Battle Items
         private void CountSysBotAncientPotion_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Ancient Potions: {CountSysBotAncientPotion.Value}";
+            WriteHeap(CountSysBotAncientPotion.Value, DataOffsets.PointerAncientPotion);
         }
 
         private void CountSysBotDustOfLife_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Dust Of Lifes: {CountSysBotDustOfLife.Value}";
+            WriteHeap(CountSysBotDustOfLife.Value, DataOffsets.PointerDustOfLife);
         }
 
         private void CountSysBotHeartChurro_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Heart Churros: {CountSysBotHeartChurro.Value}";
+            WriteHeap(CountSysBotHeartChurro.Value, DataOffsets.PointerHeartChurro);
         }
 
         private void CountSysBotSurrogateGem_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Surrogate Gems: {CountSysBotSurrogateGem.Value}";
+            WriteHeap(CountSysBotSurrogateGem.Value, DataOffsets.PointerSurrogateGem);
         }
 
         private void CountSysBotPowerPaintball_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Power Paintballs: {CountSysBotPowerPaintball.Value}";
+            WriteHeap(CountSysBotPowerPaintball.Value, DataOffsets.PointerPowerPaintball);
         }
 
         private void CountSysBotSuperWhetstone_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Super Whetstones: {CountSysBotSuperWhetstone.Value}";
+            WriteHeap(CountSysBotSuperWhetstone.Value, DataOffsets.PointerSuperWhetstone);
         }
 
         private void CountSysBotMegaBarrelBomb_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Mega Barrel Bombs: {CountSysBotMegaBarrelBomb.Value}";
+            WriteHeap(CountSysBotMegaBarrelBomb.Value, DataOffsets.PointerMegaBarrelBomb);
         }
 
         // Crafting
         private void CountSysBotWeaponSphereL_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Weapon Sphere Ls: {CountSysBotWeaponSphereL.Value}";
+            WriteHeap(CountSysBotWeaponSphereL.Value, DataOffsets.PointerWeaponSphereL);
         }
 
         private void CountSysBotArmorSphereL_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Armor Sphere Ls: {CountSysBotArmorSphereL.Value}";
+            WriteHeap(CountSysBotArmorSphereL.Value, DataOffsets.PointerArmorSphereL);
         }
 
         private void ReloadValues()
@@ -267,8 +276,9 @@ namespace MonstieHuntieHax.WinForms
                 CountSysBotCharmRecovery.Value = RecoveryCharms;
                 CountSysBotCharmRecovery.Enabled = true;
 
-                SysBotLog.Text += Environment.NewLine + $"{DataOffsets.PointerCharmRecovery}"; 
-            } catch (Exception ex)
+                SysBotLog.Text += Environment.NewLine + $"{DataOffsets.PointerCharmRecovery}";
+            }
+            catch (Exception ex)
             {
                 CountSysBotCharmTraining.Enabled = false;
                 CountSysBotCharmGathering.Enabled = false;
@@ -285,8 +295,29 @@ namespace MonstieHuntieHax.WinForms
             // Battle Items
             try
             {
-
-            } catch (Exception ex)
+                uint AncientPotions = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerAncientPotion);
+                CountSysBotAncientPotion.Value = AncientPotions;
+                CountSysBotAncientPotion.Enabled = true;
+                uint DustOfLifes = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerDustOfLife);
+                CountSysBotDustOfLife.Value = DustOfLifes;
+                CountSysBotDustOfLife.Enabled = true;
+                uint HeartChurros = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerHeartChurro);
+                CountSysBotHeartChurro.Value = HeartChurros;
+                CountSysBotHeartChurro.Enabled = true;
+                uint SurrogateGems = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerSurrogateGem);
+                CountSysBotSurrogateGem.Value = SurrogateGems;
+                CountSysBotSurrogateGem.Enabled = true;
+                uint PowerPaintballs = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerPowerPaintball);
+                CountSysBotPowerPaintball.Value = PowerPaintballs;
+                CountSysBotPowerPaintball.Enabled = true;
+                uint SuperWhetstones = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerSuperWhetstone);
+                CountSysBotSuperWhetstone.Value = SuperWhetstones;
+                CountSysBotSuperWhetstone.Enabled = true;
+                uint MegaBarrelBombs = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerMegaBarrelBomb);
+                CountSysBotMegaBarrelBomb.Value = MegaBarrelBombs;
+                CountSysBotMegaBarrelBomb.Enabled = true;
+            }
+            catch (Exception ex)
             {
                 LogError(ex);
             }
@@ -299,7 +330,8 @@ namespace MonstieHuntieHax.WinForms
                 uint ArmorSphereLs = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerArmorSphereL);
                 CountSysBotArmorSphereL.Value = ArmorSphereLs;
                 CountSysBotArmorSphereL.Enabled = true;
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 CountSysBotWeaponSphereL.Enabled = false;
                 CountSysBotArmorSphereL.Enabled = false;
