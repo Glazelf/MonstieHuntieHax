@@ -97,69 +97,78 @@ namespace MonstieHuntieHax.WinForms
         private void SysBotZeniCount_ValueChanged(object sender, EventArgs e)
         {
             SysBotLog.Text += Environment.NewLine + $"Writing Zeni: {CountSysBotZeni.Value}";
-            byte[] ZeniBytes = BitConverter.GetBytes((uint)CountSysBotZeni.Value);
-            PointerHandler.WritePointer(sb, DataOffsets.PointerZeni, ZeniBytes);
+            WriteHeap(CountSysBotZeni.Value, DataOffsets.PointerZeni);
         }
 
         private void CountSysBotBottleCaps_ValueChanged(object sender, EventArgs e)
         {
             SysBotLog.Text += Environment.NewLine + $"Writing Bottle Caps: {CountSysBotBottleCaps.Value}";
-            byte[] BottleCapsBytes = BitConverter.GetBytes((uint)CountSysBotBottleCaps.Value);
-            PointerHandler.WritePointer(sb, DataOffsets.PointerBottleCaps, BottleCapsBytes);
+            WriteHeap(CountSysBotBottleCaps.Value, DataOffsets.PointerBottleCaps);
         }
 
         private void CountSysBotCharmTraining_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Training Charms: {CountSysBotCharmTraining.Value}";
+            WriteHeap(CountSysBotCharmTraining.Value, DataOffsets.PointerCharmTraining);
         }
 
         private void CountSysBotCharmGathering_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Gathering Charms: {CountSysBotCharmGathering.Value}";
+            WriteHeap(CountSysBotCharmGathering.Value, DataOffsets.PointerCharmGathering);
         }
 
         private void CountSysBotCharmLucky_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Lucky Charms: {CountSysBotCharmLucky.Value}";
+            WriteHeap(CountSysBotCharmLucky.Value, DataOffsets.PointerCharmLucky);
         }
 
         private void CountSysBotCharmFinding_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Finding Charms: {CountSysBotCharmFinding.Value}";
+            WriteHeap(CountSysBotCharmFinding.Value, DataOffsets.PointerCharmFinding);
         }
 
         private void CountSysBotCharmMounting_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Mounting Charms: {CountSysBotCharmMounting.Value}";
+            WriteHeap(CountSysBotCharmMounting.Value, DataOffsets.PointerCharmMounting);
         }
 
         private void CountSysBotCharmSelling_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Selling Charms: {CountSysBotCharmSelling.Value}";
+            WriteHeap(CountSysBotCharmSelling.Value, DataOffsets.PointerCharmSelling);
         }
 
         private void CountSysBotCharmBuying_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Buying Charms: {CountSysBotCharmBuying.Value}";
+            WriteHeap(CountSysBotCharmBuying.Value, DataOffsets.PointerCharmBuying);
         }
 
         private void CountSysBotCharmAdamant_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Adamant Charms: {CountSysBotCharmAdamant.Value}";
+            WriteHeap(CountSysBotCharmAdamant.Value, DataOffsets.PointerCharmAdamant);
         }
 
         private void CountSysBotCharmMight_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Might Charms: {CountSysBotCharmMight.Value}";
+            WriteHeap(CountSysBotCharmGathering.Value, DataOffsets.PointerCharmGathering);
         }
 
         private void CountSysBotCharmRecovery_ValueChanged(object sender, EventArgs e)
         {
-
+            SysBotLog.Text += Environment.NewLine + $"Writing Recovery Charms: {CountSysBotCharmRecovery.Value}";
+            WriteHeap(CountSysBotCharmRecovery.Value, DataOffsets.PointerCharmRecovery);
         }
 
         private void ReloadValues()
         {
+            // Currencies
             try
             {
                 uint Zeni = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerZeni);
@@ -175,8 +184,63 @@ namespace MonstieHuntieHax.WinForms
                 CountSysBotBottleCaps.Enabled = false;
                 LogError(ex);
             }
+            // Charms
+            try
+            {
+                uint TrainingCharms = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerCharmTraining);
+                CountSysBotCharmTraining.Value = TrainingCharms;
+                CountSysBotCharmTraining.Enabled = true;
+                uint GatheringCharms = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerCharmGathering);
+                CountSysBotCharmGathering.Value = GatheringCharms;
+                CountSysBotCharmGathering.Enabled = true;
+                uint LuckyCharms = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerCharmLucky);
+                CountSysBotCharmLucky.Value = LuckyCharms;
+                CountSysBotCharmLucky.Enabled = true;
+                uint FindingCharms = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerCharmFinding);
+                CountSysBotCharmFinding.Value = FindingCharms;
+                CountSysBotCharmFinding.Enabled = true;
+                uint MountingCharms = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerCharmMounting);
+                CountSysBotCharmMounting.Value = MountingCharms;
+                CountSysBotCharmMounting.Enabled = true;
+                uint SellingCharms = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerCharmSelling);
+                CountSysBotCharmSelling.Value = SellingCharms;
+                CountSysBotCharmSelling.Enabled = true;
+                uint BuyingCharms = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerCharmBuying);
+                CountSysBotCharmBuying.Value = BuyingCharms;
+                CountSysBotCharmBuying.Enabled = true;
+                uint AdamantCharms = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerCharmAdamant);
+                CountSysBotCharmAdamant.Value = AdamantCharms;
+                CountSysBotCharmAdamant.Enabled = true;
+                uint MightCharms = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerCharmMight);
+                CountSysBotCharmMight.Value = MightCharms;
+                CountSysBotCharmMight.Enabled = true;
+                uint RecoveryCharms = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerCharmRecovery);
+                CountSysBotCharmRecovery.Value = RecoveryCharms;
+                CountSysBotCharmRecovery.Enabled = true;
+
+                SysBotLog.Text += Environment.NewLine + $"{DataOffsets.PointerCharmRecovery}"; 
+            } catch (Exception ex)
+            {
+                CountSysBotCharmTraining.Enabled = false;
+                CountSysBotCharmGathering.Enabled = false;
+                CountSysBotCharmLucky.Enabled = false;
+                CountSysBotCharmFinding.Enabled = false;
+                CountSysBotCharmMounting.Enabled = false;
+                CountSysBotCharmSelling.Enabled = false;
+                CountSysBotCharmBuying.Enabled = false;
+                CountSysBotCharmAdamant.Enabled = false;
+                CountSysBotCharmMight.Enabled = false;
+                CountSysBotCharmRecovery.Enabled = false;
+                LogError(ex);
+            }
 
             SysBotLog.Text += Environment.NewLine + "Loaded values.";
+        }
+
+        private void WriteHeap(decimal input, string pointer)
+        {
+            byte[] writeBytes = BitConverter.GetBytes((uint)input);
+            PointerHandler.WritePointer(sb, pointer, writeBytes);
         }
 
         public void LogError(Exception ex)

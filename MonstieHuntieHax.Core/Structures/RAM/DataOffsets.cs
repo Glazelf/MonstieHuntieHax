@@ -9,9 +9,10 @@
         public const string PointerBottleCaps = "[heap+407335FE]"; // u16
 
         /// <summary>
-        /// Pointers that should really be optimized out as to not need this many pointers (mostly items)
+        /// Pointers that should really be optimized out as to not need this many pointers (mostly items).
+        /// All items are u16
         /// </summary>
-        public const string PointerCharmTraining = "[heap+407333FE]"; // All items are u16
+        // Charms
         public const string PointerDustOfLife = "[heap+407326A6]";
         public const string PointerAncientPotion = "[heap+407326B6]";
         public const string PointerHeartChurro = "[heap+407354E6]";
@@ -23,16 +24,33 @@
         /// <summary>
         /// Distances between offsets
         /// </summary>
-        // Make these interpolated once that isn't a preview feature anymore
-        public const string PointerCharmGathering = PointerCharmTraining + "+16";
-        public const string PointerCharmLucky = PointerCharmGathering + "+8";
-        public const string PointerCharmFinding = PointerCharmLucky + "+8";
-        public const string PointerCharmMounting = PointerCharmFinding + "+8";
-        public const string PointerCharmSelling = PointerCharmMounting + "+8";
-        public const string PointerCharmBuying = PointerCharmSelling + "+8";
-        public const string PointerCharmAdamant = PointerCharmBuying + "+8";
-        public const string PointerCharmMight = PointerCharmAdamant + "+8";
-        public const string PointerCharmRecovery = PointerCharmMight + "+8";
+        public const int DifferenceCharmGathering = 0x10;
+        public const int DifferenceCharms = 0x8;
+
+        /// <summary>
+        /// Altering Pointers
+        /// </summary>
+        private static readonly int OffsetCharmTraining = 0x407333FE;
+        private static readonly int OffsetCharmGathering = OffsetCharmTraining + DifferenceCharmGathering;
+        private static readonly int OffsetCharmLucky = OffsetCharmGathering + DifferenceCharms * 1;
+        private static readonly int OffsetCharmFinding = OffsetCharmGathering + DifferenceCharms * 2;
+        private static readonly int OffsetCharmMounting = OffsetCharmGathering + DifferenceCharms * 3;
+        private static readonly int OffsetCharmSelling = OffsetCharmGathering + DifferenceCharms * 4;
+        private static readonly int OffsetCharmBuying = OffsetCharmGathering + DifferenceCharms * 5;
+        private static readonly int OffsetCharmAdamant = OffsetCharmGathering + DifferenceCharms * 6;
+        private static readonly int OffsetCharmMight = OffsetCharmGathering + DifferenceCharms * 7;
+        private static readonly int OffsetCharmRecovery = OffsetCharmGathering + DifferenceCharms * 8;
+
+        public static string PointerCharmTraining = $"[heap+{OffsetCharmTraining:X}]";
+        public static string PointerCharmGathering = $"[heap+{OffsetCharmGathering:X}]";
+        public static string PointerCharmLucky = $"[heap+{OffsetCharmLucky:X}]";
+        public static string PointerCharmFinding = $"[heap+{OffsetCharmFinding:X}]";
+        public static string PointerCharmMounting = $"[heap+{OffsetCharmMounting:X}]";
+        public static string PointerCharmSelling = $"[heap+{OffsetCharmSelling:X}]";
+        public static string PointerCharmBuying = $"[heap+{OffsetCharmBuying:X}]";
+        public static string PointerCharmAdamant = $"[heap+{OffsetCharmAdamant:X}]";
+        public static string PointerCharmMight = $"[heap+{OffsetCharmMight:X}]";
+        public static string PointerCharmRecovery = $"[heap+{OffsetCharmRecovery:X}]";
 
 
         /// <summary>
