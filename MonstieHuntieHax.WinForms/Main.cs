@@ -166,6 +166,51 @@ namespace MonstieHuntieHax.WinForms
             WriteHeap(CountSysBotCharmRecovery.Value, DataOffsets.PointerCharmRecovery);
         }
 
+        private void CountSysBotAncientPotion_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotDustOfLife_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotHeartChurro_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotSurrogateGem_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotPowerPaintball_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotSuperWhetstone_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotMegaBarrelBomb_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotWeaponSphereL_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CountSysBotArmorSphereL_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void ReloadValues()
         {
             // Currencies
