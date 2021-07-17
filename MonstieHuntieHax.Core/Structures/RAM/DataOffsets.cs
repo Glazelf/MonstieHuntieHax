@@ -10,9 +10,9 @@
 
         /// <summary>
         /// Pointers that should really be optimized out as to not need this many pointers (mostly items).
-        /// All items are u16
+        /// All items are u16, max 999
         /// </summary>
-        // Charms
+        // Other Items
         public const string PointerDustOfLife = "[heap+407326A6]";
         public const string PointerAncientPotion = "[heap+407326B6]";
         public const string PointerHeartChurro = "[heap+407354E6]";
@@ -30,6 +30,7 @@
         /// <summary>
         /// Altering Pointers
         /// </summary>
+        // Charms
         private static readonly int OffsetCharmTraining = 0x407333FE;
         private static readonly int OffsetCharmGathering = OffsetCharmTraining + DifferenceCharmGathering;
         private static readonly int OffsetCharmLucky = OffsetCharmGathering + DifferenceCharms * 1;
