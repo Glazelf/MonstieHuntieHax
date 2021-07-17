@@ -24,7 +24,7 @@
         /// Distances between offsets
         /// </summary>
         // Make these interpolated once that isn't a preview feature anymore
-        public const string PointerCharmGathering = PointerCharmTraining + "+16"; 
+        public const string PointerCharmGathering = PointerCharmTraining + "+16";
         public const string PointerCharmLucky = PointerCharmGathering + "+8";
         public const string PointerCharmFinding = PointerCharmLucky + "+8";
         public const string PointerCharmMounting = PointerCharmFinding + "+8";
