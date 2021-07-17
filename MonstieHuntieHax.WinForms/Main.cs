@@ -275,8 +275,6 @@ namespace MonstieHuntieHax.WinForms
                 uint RecoveryCharms = (uint)PointerHandler.GetPointerAddress(sb, DataOffsets.PointerCharmRecovery);
                 CountSysBotCharmRecovery.Value = RecoveryCharms;
                 CountSysBotCharmRecovery.Enabled = true;
-
-                SysBotLog.Text += Environment.NewLine + $"{DataOffsets.PointerCharmRecovery}";
             }
             catch (Exception ex)
             {
